@@ -1,0 +1,25 @@
+<div>
+
+    <form action="/search" method="GET">
+        <input type="text" placeholder="enter cat name" name="catName">
+    </form>
+
+
+    {{#if cats.length}}
+    {{#each cats}}
+    {{this.name}}
+    {{this.age}}
+    {{/each}}
+    {{/if}}
+
+    <ul>
+
+        {{#each gatos}}
+        <li>
+            <a href="/cats/{{this._id}}"> {{this.name}} </a>
+        </li>
+        {{/each}}
+    </ul>
+
+
+</div>
