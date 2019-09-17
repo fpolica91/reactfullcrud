@@ -1,0 +1,35 @@
+.container-fluid{
+    text-align: center;
+    background-color: #19222ee0;
+    color: white;
+}
+
+#logo, #logo1, #logo2, #logo3, #logo4 {
+    height: 60px;
+}
+#logo{
+    float: right;
+    margin: 5px;
+}
+#logo1{
+  float: right;
+  margin-top: 40px;
+}
+
+#logo2{
+    margin-top: 80px;
+}
+
+#logo3{
+    margin: 100px;
+}
+
+.bottom {
+    margin-top: 10%;
+    display: inline-block;
+   
+}
+
+.text {
+    padding-top: 10%
+}
