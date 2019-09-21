@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Dog",
+        "weight": 50
+    },
+    {
+        "name": "Cat",
+        "weight": 12
+    },
+    {
+        "name": "Hippopotamus",
+        "weight": 4000
+    },
+    {
+        "name": "Lemur",
+        "weight": 50
+    },
+    {
+        "name": "Baboon",
+        "weight": 50
+    },
+    {
+        "name": "Gator",
+        "weight": 50
+    },
+    {
+        "name": "Horse",
+        "weight": 50
+    },
+    {
+        "name": "Giraffe",
+        "weight": 50
+    },
+    {
+        "name": "Panda",
+        "weight": 50
+    }
+]
