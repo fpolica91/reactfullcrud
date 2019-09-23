@@ -8,6 +8,9 @@ import Create from './components/create';
 import Edit from './components/edit';
 import Main from './components/main';
 
+
+// APP HANDLES ROUTING 
+
 class App extends Component {
   state = {}
   render() {
