@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router, Switch, Route, Link
 } from "react-router-dom"
-import "bootstrap/dist/css/bootstrap-grid.min.css"
+
 import './App.css';
+import axios from "axios"
 import Create from './components/create';
 import Edit from './components/edit';
 import Main from './components/main';
@@ -12,7 +13,19 @@ import Main from './components/main';
 // APP HANDLES ROUTING 
 
 class App extends Component {
-  state = {}
+  state = {
+    business: []
+
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:3001/business')
+      .then(response => {
+        this.setState({ business: response.data })
+      })
+      .catch(err => console.log(err))
+  }
+
   render() {
     return (
       <Router>
@@ -41,8 +54,18 @@ class App extends Component {
 
           <Switch>
             <Route exact path='/create' component={Create} />
-            <Route path="/edit/:id" component={Edit} />
-            <Route path="/index" component={Main} />
+            <Route
+              path="/edit/:id"
+              render={(props) => <Edit
+                business={this.state.business}
+                handleOnchage={this.handleOnchage}
+                handleSubmit={this.handleSubmit}
+                {...props} />}
+            />
+            <Route
+              path="/index" render={(props) =>
+                <Main business={this.state.business} />}
+            />
           </Switch>
         </div>
       </Router>
