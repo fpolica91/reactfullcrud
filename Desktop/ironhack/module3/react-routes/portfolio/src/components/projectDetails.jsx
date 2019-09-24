@@ -5,6 +5,7 @@ import { myProjects } from './Projects';
 
 const projectDetails = (props) => {
 
+    // comments
     const getProject = (id) => {
         const theProject = oneProject => {
             return oneProject.id === id;
